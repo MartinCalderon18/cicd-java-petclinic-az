@@ -42,8 +42,7 @@ jobs:
   Analysis:
     runs-on: ubuntu-latest
     
-    steps:
-      - name: Analyze with SonarCloud         
+    steps: 
       
       - name: Cache SonarCloud packages
         uses: actions/cache@v1
@@ -51,7 +50,6 @@ jobs:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
-
 
       - name: Cache Maven packages
         uses: actions/cache@v1
